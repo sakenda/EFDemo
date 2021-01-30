@@ -1,0 +1,12 @@
+C:\Users\saken\source\repos\EFDemo\EFDemo\bin\Debug\EFDemo.exe.config
+C:\Users\saken\source\repos\EFDemo\EFDemo\bin\Debug\EFDemo.exe
+C:\Users\saken\source\repos\EFDemo\EFDemo\bin\Debug\EFDemo.pdb
+C:\Users\saken\source\repos\EFDemo\EFDemo\bin\Debug\EntityFramework.dll
+C:\Users\saken\source\repos\EFDemo\EFDemo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\saken\source\repos\EFDemo\EFDemo\bin\Debug\EntityFramework.xml
+C:\Users\saken\source\repos\EFDemo\EFDemo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\saken\source\repos\EFDemo\EFDemo\obj\Debug\EFDemo.csprojAssemblyReference.cache
+C:\Users\saken\source\repos\EFDemo\EFDemo\obj\Debug\EFDemo.csproj.CoreCompileInputs.cache
+C:\Users\saken\source\repos\EFDemo\EFDemo\obj\Debug\EFDemo.csproj.CopyComplete
+C:\Users\saken\source\repos\EFDemo\EFDemo\obj\Debug\EFDemo.exe
+C:\Users\saken\source\repos\EFDemo\EFDemo\obj\Debug\EFDemo.pdb
