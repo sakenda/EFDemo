@@ -52,61 +52,61 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Category.cs">
+    <Compile Include="Database\Category.cs">
       <DependentUpon>Northwind.tt</DependentUpon>
     </Compile>
-    <Compile Include="ConcurrencyModeDB.cs" />
-    <Compile Include="Customer.cs">
+    <Compile Include="Lessons\ConcurrencyModeDB.cs" />
+    <Compile Include="Database\Customer.cs">
       <DependentUpon>Northwind.tt</DependentUpon>
     </Compile>
-    <Compile Include="Northwind.Context.cs">
+    <Compile Include="Database\Northwind.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Northwind.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Northwind.cs">
+    <Compile Include="Database\Northwind.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Northwind.tt</DependentUpon>
     </Compile>
-    <Compile Include="Northwind.Designer.cs">
+    <Compile Include="Database\Northwind.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Northwind.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Order.cs">
+    <Compile Include="Database\Order.cs">
       <DependentUpon>Northwind.tt</DependentUpon>
     </Compile>
-    <Compile Include="Order_Detail.cs">
+    <Compile Include="Database\Order_Detail.cs">
       <DependentUpon>Northwind.tt</DependentUpon>
     </Compile>
-    <Compile Include="Product.cs">
+    <Compile Include="Database\Product.cs">
       <DependentUpon>Northwind.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReadDB.cs" />
-    <Compile Include="UpdateClient.cs" />
-    <Compile Include="UpdateDB.cs" />
+    <Compile Include="Lessons\ReadDB.cs" />
+    <Compile Include="Lessons\UpdateClient.cs" />
+    <Compile Include="Lessons\UpdateDB.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="Northwind.edmx">
+    <EntityDeploy Include="Database\Northwind.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Northwind.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Northwind.edmx.diagram">
+    <None Include="Database\Northwind.edmx.diagram">
       <DependentUpon>Northwind.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Northwind.Context.tt">
+    <Content Include="Database\Northwind.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Northwind.Context.cs</LastGenOutput>
       <DependentUpon>Northwind.edmx</DependentUpon>
     </Content>
-    <Content Include="Northwind.tt">
+    <Content Include="Database\Northwind.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Northwind.edmx</DependentUpon>
       <LastGenOutput>Northwind.cs</LastGenOutput>
