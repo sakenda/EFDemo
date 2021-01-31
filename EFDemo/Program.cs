@@ -39,7 +39,9 @@ namespace EFDemo
                 //UpdateClient.ChangeWithReference(context);
                 //UpdateClient.ChangeWithCollection(context);
                 //UpdateClient.FilterChangedEntities(context);
-                UpdateClient.ReloadEntries(context);
+                //UpdateClient.ReloadEntries(context);
+
+                ConcurrencyModeDB.WriteToDBTwoUserExample(context);
             }
 
             Console.ReadKey();

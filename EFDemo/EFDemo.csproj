@@ -55,6 +55,7 @@
     <Compile Include="Category.cs">
       <DependentUpon>Northwind.tt</DependentUpon>
     </Compile>
+    <Compile Include="ConcurrencyModeDB.cs" />
     <Compile Include="Customer.cs">
       <DependentUpon>Northwind.tt</DependentUpon>
     </Compile>

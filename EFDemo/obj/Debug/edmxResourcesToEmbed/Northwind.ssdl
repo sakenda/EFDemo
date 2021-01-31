@@ -69,6 +69,7 @@
     <Property Name="UnitsOnOrder" Type="smallint" />
     <Property Name="ReorderLevel" Type="smallint" />
     <Property Name="Discontinued" Type="bit" Nullable="false" />
+    <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
   </EntityType>
   <Association Name="FK_Order_Details_Orders">
     <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
