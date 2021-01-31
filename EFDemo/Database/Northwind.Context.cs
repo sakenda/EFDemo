@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EFDemo.Database
+namespace EFDemo
 {
     using System;
     using System.Data.Entity;
