@@ -53,6 +53,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBModels\Configuration\CourseConfiguration.cs" />
+    <Compile Include="DBModels\Configuration\EnrollmentConfiguration.cs" />
+    <Compile Include="DBModels\Configuration\ScheduleConfiguration.cs" />
     <Compile Include="DBModels\Course.cs" />
     <Compile Include="DBModels\Enrollment.cs" />
     <Compile Include="DBModels\Schedule.cs" />
