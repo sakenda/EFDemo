@@ -24,6 +24,7 @@ namespace Sample1.DBModels
             modelBuilder.Configurations.Add(new ScheduleConfiguration());
             modelBuilder.Configurations.Add(new CourseConfiguration());
             modelBuilder.Configurations.Add(new EnrollmentConfiguration());
+            modelBuilder.Configurations.Add(new AddressConfiguration());
         }
     }
 }

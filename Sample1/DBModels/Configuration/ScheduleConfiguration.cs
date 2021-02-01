@@ -6,7 +6,7 @@ namespace Sample1.DBModels.Configuration
     {
         public ScheduleConfiguration()
         {
-            ToTable("PlannedCourses");
+            ToTable("PlannedCourses", schemaName: "Admin");
             Property(cd => cd.Start).HasColumnName("StartDate");
         }
     }

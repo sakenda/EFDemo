@@ -1,6 +1,7 @@
 ﻿using Sample1.DBModels;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Sample1
 {
@@ -8,24 +9,27 @@ namespace Sample1
     {
         private static void Main(string[] args)
         {
-            var teacher = new Teacher
-            {
-                Name = "Hans Fischer",
-                Courses = new List<Course>
-                {
-                    new Course { Title = "VB.NET" },
-                    new Course { Title = "EF" },
-                    new Course { Title = "C#" }
-                }
-            };
-
             using (var context = new SchoolContext())
             {
-                context.Teachers.Add(teacher);
+                //context.Database.Log = Console.Write;
+
+                var addr = new Address();
+                addr.Country = "D";
+                addr.City = "Bonn";
+                addr.Street = "Hauptstraße 1";
+
+                context.Students.Add(new Student
+                {
+                    Address = addr,
+                    Age = "23",
+                    FirstName = "Peter",
+                    LastName = "Schneider"
+                });
+
                 context.SaveChanges();
+                Console.WriteLine("Datenbank aktualisiert...");
             }
 
-            Console.WriteLine("Datenbank aktualisiert...");
             Console.ReadKey();
         }
     }

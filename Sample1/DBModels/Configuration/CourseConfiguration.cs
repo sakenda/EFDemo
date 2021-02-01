@@ -10,7 +10,9 @@ namespace Sample1.DBModels.Configuration
             Property(c => c.CourseID).HasColumnName("KursNr");
             Property(c => c.Title).IsRequired();
             Property(c => c.Title).HasMaxLength(120);
-            Property(c => c.CourseID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity)
+            Property(c => c.CourseID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            Property(c => c.Price).HasColumnType("money");
+            Property(c => c.RowVersion).IsRowVersion();
         }
     }
 }
