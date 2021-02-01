@@ -9,7 +9,6 @@ namespace EFDemo
 {
     public static class ReadDB
     {
-        // Filter mit Query
         public static void FilterQueryMethod(NorthwindEntities context)
         {
             var result = context.Categories
@@ -21,7 +20,6 @@ namespace EFDemo
                 Console.WriteLine($"{item.ProductName,-40}{item.UnitPrice}");
         }
 
-        // Explizites Load
         public static void ExplicitLoadMethod(NorthwindEntities context)
         {
             var result = context.Categories
@@ -38,8 +36,6 @@ namespace EFDemo
             Console.WriteLine($"{result1.ProductName,-40}{result1.Category.CategoryName}");
         }
 
-        // Einbinden von mehreren Tabellen durch Include-Methode
-        // Problem: Datentabellen können nur gesamt abgefragt werden.
         public static void EagerLoadMultipleTablesMethod(NorthwindEntities context)
         {
             var result = context.Products
@@ -55,7 +51,6 @@ namespace EFDemo
             }
         }
 
-        // Einbinden von mehreren Tabellen durch Include-Methode
         public static void EagerLoadMethod(NorthwindEntities context)
         {
             var result = context.Categories
@@ -82,7 +77,6 @@ namespace EFDemo
                     Console.WriteLine(item.ProductName);
         }
 
-        // Events der Local-Methode
         public static void EventsLoadMethod(NorthwindEntities context)
         {
             context.Products.Local.CollectionChanged += (sender, e) =>
@@ -93,7 +87,6 @@ namespace EFDemo
             context.Products.Add(new Product { ProductName = "Chilli" });
         }
 
-        // Mehrfacher Aufruf von Load
         public static void MultipleLoadMethod(NorthwindEntities context)
         {
             var query = context.Products.Where(p => p.UnitPrice > 100);
@@ -104,7 +97,6 @@ namespace EFDemo
                 Console.WriteLine($"{item.ProductName,-40}{item.UnitPrice}");
         }
 
-        // Load- und Local-Methode Alternative
         public static void LoadLocalAltMethod(NorthwindEntities context)
         {
             Console.WriteLine();
@@ -115,7 +107,6 @@ namespace EFDemo
                 Console.WriteLine(item.ProductName);
         }
 
-        //  Load- und Local-Methode
         public static void LoadLocalMethod(NorthwindEntities context)
         {
             context.Products.Load();
@@ -126,7 +117,6 @@ namespace EFDemo
                 Console.WriteLine(item.ProductName);
         }
 
-        // Find-Methode
         public static void FindMethod(NorthwindEntities context)
         {
             var query = context.Products;
