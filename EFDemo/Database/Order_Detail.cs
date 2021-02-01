@@ -12,8 +12,9 @@ namespace EFDemo
     using System;
     using System.Collections.Generic;
     
-    public partial class Order_Detail
+    public partial class Order_Detail : IEntity
     {
+        public STEState State { get; set; }
         public int OrderID { get; set; }
         public int ProductID { get; set; }
         public decimal UnitPrice { get; set; }

@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
 using System.Linq;
 
 namespace EFDemo
@@ -41,10 +39,36 @@ namespace EFDemo
                 //UpdateClient.FilterChangedEntities(context);
                 //UpdateClient.ReloadEntries(context);
 
-                ConcurrencyModeDB.WriteToDBTwoUserExample(context);
+                //ConcurrencyModeDB.WriteToDBTwoUserExample(context);
+
+                //TransactionExample(context);
+                STEClient.ClientConsole(context);
             }
 
             Console.ReadKey();
+        }
+
+        private static void TransactionExample(NorthwindEntities context)
+        {
+            using (DbContextTransaction transaction = context.Database.BeginTransaction())
+            {
+                try
+                {
+                    var prodNew = new Product { ProductName = "Senf" };
+                    context.Products.Add(prodNew);
+                    context.SaveChanges();
+
+                    var prod = context.Products.Single(p => p.ProductID == 100);
+                    prod.ProductName = "Käse";
+                    context.SaveChanges();
+
+                    transaction.Commit();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Es ist ein Fehler aufgetreten.\nError: {0}", ex.Message);
+                }
+            }
         }
     }
 }

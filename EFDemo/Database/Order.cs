@@ -12,8 +12,9 @@ namespace EFDemo
     using System;
     using System.Collections.Generic;
     
-    public partial class Order
+    public partial class Order : IEntity
     {
+        public STEState State { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Order()
         {

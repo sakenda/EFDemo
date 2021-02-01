@@ -83,6 +83,9 @@
     <Compile Include="Database\Product.cs">
       <DependentUpon>Northwind.tt</DependentUpon>
     </Compile>
+    <Compile Include="Lessons\Self-Tracking-Entities\IEntity.cs" />
+    <Compile Include="Lessons\Self-Tracking-Entities\STEClient.cs" />
+    <Compile Include="Lessons\Self-Tracking-Entities\STEServer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Lessons\ReadDB.cs" />
