@@ -10,39 +10,40 @@ namespace EFDemo
         {
             using (var context = new NorthwindEntities())
             {
-                //context.Database.Log = Console.Write;   // Datenbank abfragen in der Console anzeigen
+                context.Database.Log = Console.Write;   // Datenbank abfragen in der Console anzeigen
 
-                //ReadDB.FindMethod(context);
-                //ReadDB.LoadLocalMethod(context);
-                //ReadDB.LoadLocalAltMethod(context);
-                //ReadDB.MultipleLoadMethod(context);
-                //ReadDB.EventsLoadMethod(context);
-                //ReadDB.LazyLoadMethod(context);
-                //ReadDB.EagerLoadMethod(context);
-                //ReadDB.EagerLoadMultipleTablesMethod(context);
-                //ReadDB.ExplicitLoadMethod(context);
-                //ReadDB.FilterQueryMethod(context);
+                ReadDB.FindMethod(context);
+                ReadDB.LoadLocalMethod(context);
+                ReadDB.LoadLocalAltMethod(context);
+                ReadDB.MultipleLoadMethod(context);
+                ReadDB.EventsLoadMethod(context);
+                ReadDB.LazyLoadMethod(context);
+                ReadDB.EagerLoadMethod(context);
+                ReadDB.EagerLoadMultipleTablesMethod(context);
+                ReadDB.ExplicitLoadMethod(context);
+                ReadDB.FilterQueryMethod(context);
 
-                //UpdateDB.ChangeEntity(context);
-                //UpdateDB.AddEntity(context);
-                //UpdateDB.AddWithNavigationProp(context);
-                //UpdateDB.DeleteEntity(context);
-                //UpdateDB.DeleteEntityWithRelation(context);
+                UpdateDB.ChangeEntity(context);
+                UpdateDB.AddEntity(context);
+                UpdateDB.AddWithNavigationProp(context);
+                UpdateDB.DeleteEntity(context);
+                UpdateDB.DeleteEntityWithRelation(context);
 
-                //UpdateClient.DBPropertyValuesExample(context);
-                //UpdateClient.DeletedOrAddedEntities(context);
-                //UpdateClient.ChangeUndoCurrentOriginalValues(context);
-                //UpdateClient.ChangeOriginalCurrentValue(context);
-                //UpdateClient.DisplayAllChangedProperties(context);
-                //UpdateClient.ChangeWithReference(context);
-                //UpdateClient.ChangeWithCollection(context);
-                //UpdateClient.FilterChangedEntities(context);
-                //UpdateClient.ReloadEntries(context);
+                UpdateClient.DBPropertyValuesExample(context);
+                UpdateClient.DeletedOrAddedEntities(context);
+                UpdateClient.ChangeUndoCurrentOriginalValues(context);
+                UpdateClient.ChangeOriginalCurrentValue(context);
+                UpdateClient.DisplayAllChangedProperties(context);
+                UpdateClient.ChangeWithReference(context);
+                UpdateClient.ChangeWithCollection(context);
+                UpdateClient.FilterChangedEntities(context);
+                UpdateClient.ReloadEntries(context);
 
-                //ConcurrencyModeDB.WriteToDBTwoUserExample(context);
+                ConcurrencyModeDB.WriteToDBTwoUserExample(context);
 
-                //TransactionExample(context);
+                TransactionExample(context);
                 STEClient.ClientConsole(context);
+                ValidationConsole.DataAnnotations(context);
             }
 
             Console.ReadKey();

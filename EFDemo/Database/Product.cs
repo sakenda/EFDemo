@@ -11,7 +11,9 @@ namespace EFDemo
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
+    [MetadataType(typeof(Product_Metadata))]
     public partial class Product : IEntity
     {
         public STEState State { get; set; }
