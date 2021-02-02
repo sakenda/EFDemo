@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Sample1.DBModels
 {
@@ -6,6 +7,7 @@ namespace Sample1.DBModels
     {
         public int TeacherID { get; set; }
         public string Name { get; set; }
-        public List<Course> Courses { get; set; }
+        public ICollection<Course> PresenceCourses { get; set; }
+        public ICollection<Course> OnlineCourses { get; set; }
     }
 }

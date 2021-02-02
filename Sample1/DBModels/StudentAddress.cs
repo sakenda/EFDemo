@@ -1,16 +1,15 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Sample1.DBModels
 {
-    //[ComplexType]
-    public class Address
+    public class StudentAddress
     {
-        public int AddressID { get; set; }
-        //[Required, MaxLength(40)]
+        [ForeignKey("Student")]
+        public int StudentAddressID { get; set; }
         public string City { get; set; }
-        //[Required, MaxLength(50)]
         public string Street { get; set; }
-        //[Required, MaxLength(20)]
         public string Country { get; set; }
+        public Student Student { get; set; }
     }
 }

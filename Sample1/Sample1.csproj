@@ -53,8 +53,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBModels\Address.cs" />
-    <Compile Include="DBModels\Configuration\AddressConfiguration.cs" />
+    <Compile Include="DBModels\StudentAddress.cs" />
+    <Compile Include="DBModels\Configuration\StudentAddressConfiguration.cs" />
     <Compile Include="DBModels\Configuration\CourseConfiguration.cs" />
     <Compile Include="DBModels\Configuration\EnrollmentConfiguration.cs" />
     <Compile Include="DBModels\Configuration\ScheduleConfiguration.cs" />

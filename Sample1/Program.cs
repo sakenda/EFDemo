@@ -1,6 +1,7 @@
 ﻿using Sample1.DBModels;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 
 namespace Sample1
@@ -11,21 +12,22 @@ namespace Sample1
         {
             using (var context = new SchoolContext())
             {
+                SqlConnection.ClearAllPools();
                 //context.Database.Log = Console.Write;
 
-                var addr = new Address();
-                addr.Country = "D";
-                addr.City = "Bonn";
-                addr.Street = "Hauptstraße 1";
-
-                context.Students.Add(new Student
+                var student = new Student
                 {
-                    Address = addr,
-                    Age = "23",
-                    FirstName = "Peter",
-                    LastName = "Schneider"
-                });
+                    FirstName = "Willi",
+                    LastName = "Krause",
+                    Address = new StudentAddress
+                    {
+                        City = "Bonn",
+                        Street = "Hauptstraße 1",
+                        Country = "Germany"
+                    }
+                };
 
+                context.Students.Add(student);
                 context.SaveChanges();
                 Console.WriteLine("Datenbank aktualisiert...");
             }
